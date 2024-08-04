@@ -153,17 +153,6 @@ spawn(function()
 	end)
 end)
 
-getgenv().Ku_Mai_Ru = true
-spawn(function()
-	game:GetService("RunService").Heartbeat:Connect(function()
-		if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid") and getgenv().Ku_Mai_Ru then
-			setfflag("HumanoidParallelRemoveNoPhysics", "False")
-			setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
-			game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
-		end
-	end)
-end)
-
 getgenv().setfflag = true
 spawn(function()
     while wait() do
